@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "test-9fe3"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "test-9fe3"
+  template:
+    metadata:
+      labels:
+        app: "test-9fe3"
+    spec:
+      containers:
+        - name: "test-9fe3"
+          image: "authregdevdiv.azurecr.io/test"
+          ports:
+          - containerPort: 80
