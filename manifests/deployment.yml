@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "portfoliomanage-4597"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "portfoliomanage-4597"
+  template:
+    metadata:
+      labels:
+        app: "portfoliomanage-4597"
+    spec:
+      containers:
+        - name: "portfoliomanage-4597"
+          image: "authregdevdiv.azurecr.io/portfoliomanage"
+          ports:
+          - containerPort: 80
