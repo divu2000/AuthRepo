@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "portfoliomanage-4597"
+    labels:
+        app: "portfoliomanage-4597"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: portfoliomanage8c0c-portfoliomanage-4597.b5b2d980d9fb4e7bb5f7.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "portfoliomanage-4597"
+                servicePort: 80
